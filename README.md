@@ -10,9 +10,6 @@ Risks of a Monolithic App:
 * Security concerns due to user needing to connect directly to the EC2 instance
 * Data Loss if application fails
 
-## Phase 1 Architecture
-[Insert Image 1]
-
 # Phase 2 - Automating Wordpress Blog Provisioning with the use of Launch Templates
 Replicating the launch process using an AWS launch template. This will allow for automatic provisioning of the application. Drastically reducing provisioning time and decreases the risk of potential errors from user input
 
@@ -20,9 +17,6 @@ The launch template will be used at a later phase.
 
 Risks:
 * See above Phase 1 risks. 
-
-## Phase 2 Architecture
-[Insert Image 2]
 
 # Phase 3 - Database Migration
 Migrating the MySQL Database off the EC2 instance and running it on a dedicated RDS instance. The data will exist outside of the application. This is the first step of moving toward an elastic architecture. 
@@ -33,9 +27,6 @@ Risks:
 * A
 * B
 
-## Phase 3 Architecture
-[Insert Image 3]
-
 # Phase 4 - Storing Content on EFS (Elastic File System)
 EFS will be used to create a place to store content for the application. EFS is resilient network based shared file system. Thus increasing the elasticity in the application architecture. 
 
@@ -45,8 +36,6 @@ Risks:
 * A
 * B
 
-## Phase 4 Architecture
-[Insert Image 4]
 
 # Phase 5 - Adding an ALB (App Load Balancer) & an ASG (Auto Scaling Group)
 Adding the ALB will abstract the users away from the infrastucture. This is where the users will connect to rather than directly into an EC2 instance. 
@@ -54,9 +43,6 @@ Adding the ALB will abstract the users away from the infrastucture. This is wher
 The ASG will allow for resource provisioning based on load (Scaling in or out). 
 
 System is now fully resilient, self-healing, and fully elastically scalable
-
-## Phase 5 Architecture
-[Insert Image 5]
 
 ---
 # Phase 6 [Optional] - Replacing RDS with Aurora
@@ -66,14 +52,20 @@ By replacing Aurora with RDS, you increase the availability of your data in the 
 
 RDS does have some form of elasticity if you enable the multi-AZ feature. It will synchornously replicate to another availability zone. You could stand up read replicas to reduce load on the primary DB but without multi-AZ enabled, a failure would affect the application's ability to write to the database. 
 
-
-## Phase 6 Architecture
-[Insert Image 5]
-
-
 ---
 # Architecture Evolution Images
-[Insert Images 1 - 5 + Optional 6]
+## Phase 1
+[Arch Diagram]
+## Phase 2
+[Arch Diagram]
+## Phase 3
+[Arch Diagram]
+## Phase 4
+[Arch Diagram]
+## Phase 5
+[Arch Diagram]
+## [Optional] Phase 6
+
 
 ---
 # Guide 
