@@ -72,7 +72,10 @@ RDS does have some form of elasticity if you enable the multi-AZ feature. It wil
 
 
 ---
+# Architecture Evolution Images
+[Insert Images 1 - 5 + Optional 6]
 
+---
 # Guide 
 ## Pre Step:
 
