@@ -22,7 +22,7 @@ General steps perfomed:
 3. Perform manual install of the database and Wordpress
 
 Challenges & Risks addressed of the Monolithic App:
-* None. 
+* None
 
 
 # Phase 2 - Automating Wordpress Blog Provisioning with the use of Launch Templates
@@ -47,7 +47,7 @@ Migrating the MySQL Database off the EC2 instance and running it on a dedicated 
 
 In the event of an EC2/App failure, the data will persist. Thus increasing the availability of at least the data at  this stage
 
-General steps Performed:
+General steps performed:
 1. Create RDS instance
 2. Take a backup and migrate Wordpress data from EC2 to RDS
 3. Update Launch Template 
@@ -114,16 +114,17 @@ RDS does have some form of elasticity if you enable the multi-AZ feature. It wil
 ---
 # Architecture Evolution Diagrams
 ## Phase 1
-[Arch Diagram]
+![phase_1](https://user-images.githubusercontent.com/12003721/229203282-0f2f9f41-f983-4846-bc44-53967fa7a35a.png)
 ## Phase 2
-[Arch Diagram]
+![phase_2](https://user-images.githubusercontent.com/12003721/229203354-654e48bd-1492-40ad-ac00-0eb8eb1f4484.png)
 ## Phase 3
-[Arch Diagram]
+![phase_3](https://user-images.githubusercontent.com/12003721/229203409-1e30c760-70f1-4c70-b51f-245b7958e933.png)
 ## Phase 4
-[Arch Diagram]
+![phase_4](https://user-images.githubusercontent.com/12003721/229203443-d04ca8ec-e0e1-4a9e-9515-eb2becb5cccc.png)
 ## Phase 5
-[Arch Diagram]
+![final_phase](https://user-images.githubusercontent.com/12003721/229203487-5fa2ad06-7b70-467a-a734-44edea266165.png)
 
 ---
 # Credits
-Big shoutout to Adrian Cantrill for putting this lab together and teaching me about how to evolve and architecture. 
+Big shoutout to Adrian Cantrill for putting this lab together and teaching me about how to evolve an architecture. 
+Please check out him out https://github.com/acantril/learn-cantrill-io-labs 
