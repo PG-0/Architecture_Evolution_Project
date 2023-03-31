@@ -9,8 +9,7 @@ Challenges & Risks of a Monolithic App:
 1. The app and db are built manually which is time consuming and not automated
 2. The db and app being on the same instance means neither can scale without the other
 3. The app media/content is stored locally on the instance. Scaling in or out will risk the media 
-4. User connects directly into instance via the IP. This poses a security risk 
-* The IP address of the instance changes when it is stopped or terminated
+4. User connects directly into instance via the IP. This poses a security risk. Also, the IP address of the instance changes when it is stopped or terminated
 5. Lack of load balancing, health checking and auto-healing
 
 # Phase 1 - Manual Creation of Wordpress blog
@@ -37,8 +36,7 @@ Challenges & Risks of a Monolithic App:
 1. [Fixed/Addressed] The app and db are built manually which is time consuming and not automated
 2. The db and app being on the same instance means neither can scale without the other
 3. The app media/content is stored locally on the instance. Scaling in or out will risk the media 
-4. User connects directly into instance via the IP. This poses a security risk 
-* The IP address of the instance changes when it is stopped or terminated
+4. User connects directly into instance via the IP. This poses a security risk. Also, the IP address of the instance changes when it is stopped or terminated
 5. Lack of load balancing, health checking and auto-healing
 
 
@@ -56,8 +54,7 @@ Challenges & Risks of a Monolithic App:
 1. [Fixed/Addressed] The app and db are built manually which is time consuming and not automated
 2. [Fixed/Addressed] The db and app being on the same instance means neither can scale without the other
 3. The app media/content is stored locally on the instance. Scaling in or out will risk the media 
-4. User connects directly into instance via the IP. This poses a security risk 
-* The IP address of the instance changes when it is stopped or terminated
+4. User connects directly into instance via the IP. This poses a security risk. Also, the IP address of the instance changes when it is stopped or terminated
 5. Lack of load balancing, health checking and auto-healing
 
 # Phase 4 - Storing Content on EFS (Elastic File System)
@@ -74,8 +71,7 @@ Challenges & Risks of a Monolithic App:
 1. [Fixed/Addressed] The app and db are built manually which is time consuming and not automated
 2. [Fixed/Addressed] The db and app being on the same instance means neither can scale without the other
 3. [Fixed/Addressed] The app media/content is stored locally on the instance. Scaling in or out will risk the media 
-4. User connects directly into instance via the IP. This poses a security risk 
-* The IP address of the instance changes when it is stopped or terminated
+4. User connects directly into instance via the IP. This poses a security risk. Also, the IP address of the instance changes when it is stopped or terminated
 5. Lack of load balancing, health checking and auto-healing
 
 
@@ -99,12 +95,11 @@ Challenges & Risks of a Monolithic App:
 1. [Fixed/Addressed] The app and db are built manually which is time consuming and not automated
 2. [Fixed/Addressed] The db and app being on the same instance means neither can scale without the other
 3. [Fixed/Addressed] The app media/content is stored locally on the instance. Scaling in or out will risk the media 
-4. [Fixed/Addressed] User connects directly into instance via the IP. This poses a security risk 
-* The IP address of the instance changes when it is stopped or terminated
+4. [Fixed/Addressed] User connects directly into instance via the IP. This poses a security risk. Also, the IP address of the instance changes when it is stopped or terminated
 5. [Fixed/Addressed] Lack of load balancing, health checking and auto-healing
 
 ---
-# Phase 6 [Optional] - Replacing RDS with Aurora 
+# Phase 6 [Potential Further Evolution] - Replacing RDS with Aurora 
 Optional due to Aurora having a $$$ associated with it. 
 
 By replacing Aurora with RDS, you increase the availability of your data in the event of a database failure. Aurora is fully managed by AWS and has auto scaling capabilities. It is reliable and fault tolerant by design. Aurora is much more cloud focused but limited to PostgreSQL and MySQL. 
